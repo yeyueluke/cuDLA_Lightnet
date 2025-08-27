@@ -8,6 +8,7 @@ Orin
 
 
 Docker image (nvcr.io/nvidia/l4t-jetpack:r36.2.0)
+
 板子：orin 5.1.2（35.4.1） & 6.2(36.4.3）
 
 
