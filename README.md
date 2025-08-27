@@ -8,6 +8,7 @@ Orin
 
 
 Docker image (nvcr.io/nvidia/l4t-jetpack:r36.2.0)
+板子：orin 5.1.2（35.4.1） & 6.2(36.4.3）
 
 
 # Dependencies
@@ -24,7 +25,7 @@ For `nvsci_headers`, please you may get it from https://developer.nvidia.com/dow
 # Instructions
 
 
-`bash script/build_dla.sh`
+`bash script/build_dla.sh`   目前缺失脚本里的onnx文件
 
 
 `make -j`
