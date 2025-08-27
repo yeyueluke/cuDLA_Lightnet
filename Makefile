@@ -51,17 +51,20 @@ OPENCV_LIB_PATH ?= /usr/lib/aarch64-linux-gnu/
 INCLUDES += -I $(CUDA_PATH)/include \
             -I $(OPENCV_INCLUDE_PATH) \
 			-I /usr/include \
-			-I /home/autoware/develop/nvsci_headers \
-			-I /home/autoware/develop/cuDLA_Lightnet/include
+			-I /home/nvidia/nvsci_headers \
+			-I /home/nvidia/cuDLA_Lightnet/include
 LIBRARIES += -l cudla -L$(CUDA_PATH)/lib64 \
              -l cuda -l cudart -l nvinfer \
              -L $(OPENCV_LIB_PATH) \
 			 -l pthread \
 			 -l gflags \
 	         -l opencv_objdetect -l opencv_highgui -l opencv_imgproc -l opencv_core -l opencv_imgcodecs -l opencv_dnn \
-			 -L /usr/lib/aarch64-linux-gnu/nvidia/ -lnvscibuf \
-			 -L /usr/lib/aarch64-linux-gnu/nvidia/ -lnvscisync
-
+			 -L /usr/lib/aarch64-linux-gnu/tegra/ -lnvscibuf \    
+			 -L /usr/lib/aarch64-linux-gnu/tegra/ -lnvscisync
+######################################################################################
+# on jetpack 5.1.2(35.4.1) use: /usr/lib/aarch64-linux-gnu/tegra/
+# on jetpack 6.2 (36.4.3) use: /usr/lib/aarch64-linux-gnu/nvidia/ or /usr/lib/aarch64-linux-gnu/tegra all ok
+#####################################################################################
 CXXSRCS := $(wildcard $(SRCDIR)/*.cc)
 CXXOBJS := $(patsubst %.cc,$(BUILD_DIR)/%.o,$(notdir $(CXXSRCS)))
 NVCCSRCS := $(wildcard $(SRCDIR)/*.cu)
