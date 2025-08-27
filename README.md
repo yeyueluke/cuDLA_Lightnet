@@ -22,7 +22,11 @@ Docker image (nvcr.io/nvidia/l4t-jetpack:r36.2.0)
 
 For `nvsci_headers`, please you may get it from https://developer.nvidia.com/downloads/embedded/l4t/r36_release_v3.0/sources/public_sources.tbz2
 
-不同jetpack的 nvsci_headers 有点不一样
+https://developer.download.nvidia.cn/embedded/L4T/r35_Release_v3.1/sources/public_sources.tbz2?t=eyJscyI6IndlYnNpdGUiLCJsc2QiOiJkZXZlbG9wZXIubnZpZGlhLmNvbS9uYW5vdmRiIn0=
+
+https://developer.download.nvidia.com/embedded/L4T/r35_Release_v5.0/sources/public_sources.tbz2?t=eyJscyI6IndlYnNpdGUiLCJsc2QiOiJkZXZlbG9wZXIubnZpZGlhLmNvbS9uYW5vdmRiIn0=
+
+不同jetpack的 nvsci_headers 有点不一样。 项目中include 已包含 nvsci_headers ，如果有必要根据实际的jetpack版本下载
 
 
 # Instructions
