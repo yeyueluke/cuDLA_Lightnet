@@ -51,8 +51,11 @@ OPENCV_LIB_PATH ?= /usr/lib/aarch64-linux-gnu/
 INCLUDES += -I $(CUDA_PATH)/include \
             -I $(OPENCV_INCLUDE_PATH) \
 			-I /usr/include \
-			-I /home/nvidia/nvsci_headers \
+			-I /home/nvidia/nvsci_headers \  
 			-I /home/nvidia/cuDLA_Lightnet/include
+########################################################
+# 根据时间路径修改头文件路径
+########################################################
 LIBRARIES += -l cudla -L$(CUDA_PATH)/lib64 \
              -l cuda -l cudart -l nvinfer \
              -L $(OPENCV_LIB_PATH) \
